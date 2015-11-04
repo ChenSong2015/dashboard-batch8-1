@@ -1,2 +1,4 @@
-node_modeules
+node_modules
 bower_components
+dashboardServer/npm-debug.log
+dashboardServer/node_modules
