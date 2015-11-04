@@ -1,0 +1,38 @@
+body {
+	background-image: url("../images/app/background2.jpg");
+    background-attachment: fixed;
+}
+
+div {
+	margin: auto;
+	margin-top: 15%;
+	width: 500px;
+	text-align: center;
+}
+
+h1 {
+	color: white;
+}
+
+input {
+	
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 6px;
+	font-size: 150%;
+	padding: 8px 5px 8px 5px;
+	border: none;
+}
+
+#user {
+	width: 490px;
+}
+
+#pass{
+	width: 490px;
+}
+
+#sub {
+	width: 500px;
+	background: lightgreen;
+}
