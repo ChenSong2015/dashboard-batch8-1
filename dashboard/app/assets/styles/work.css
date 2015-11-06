@@ -1,0 +1,54 @@
+.body {
+	position: relative;
+	width: 100%;
+}
+.nav {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+}
+.sublist {
+	border:1px solid lightgrey;
+	border-radius:10px;
+	position: absolute;
+	top: 25px;
+	width:50px;
+	box-shadow:0px 2px 3px 2px #ccc;
+	list-style-type: none;
+	font-size: 20px;
+	width: 200px;
+}
+.sublist li {
+	margin-left: -40px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 20px;
+}
+.sublist li:hover {
+	background-color: WhiteSmoke;
+}
+.filter {
+	float: right;
+	margin-left: 20px;
+	padding: 10px 10px 10px 10px;
+	border-radius:5px;
+	border:1px solid lightgrey;
+	font-size: 20px;
+	display: inline-block;
+}
+#design {
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 10px 10px 10px;
+	background-color: SteelBlue;
+	border-radius:5px;
+}
+#add {
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 10px 10px 10px;
+	margin-left: 20px;
+	background-color:Tomato;
+	border-radius:5px;
+}
