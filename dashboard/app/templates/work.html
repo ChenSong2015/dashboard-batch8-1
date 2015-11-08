@@ -4,9 +4,11 @@
 	<title></title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/work.css">
+	<script src="../../bower_components/angular/angular.js"></script>
+	<script src="../../bower_components/angular/angular.min.js"></script>
 </head>
 <body>
-<div class="body">
+<div class="body" ng-app="WorkApp" ng-controller="WorkCtrl">
 	<div class="nav">
     <a id="design">Select Design <span>▼</span></a> <a id="add">Add Item</a>
     <ul class="sublist">
@@ -19,9 +21,31 @@
     <input class="filter" type="text" placeholder="Comment">
 		
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	<div class="content-card">
+		<div class="content" ng-repeat="content in contents track by $index">
+		<img src={{"../"+content.image}} style="width:100%"><br>
+		<h3>{{content.title}}</h3><br>
+		<span class="author">{{content.author}}<span><br>
+		{{content.like}}<br>
+		{{content.comment}}<br>
+		<a href="">Edit</a>  | 
+		<a href="">Delete</a>
+		</div>
+	</div>
+	<div class="content-list" style="display:none; width=100%;">
+		
+
+
+	</div>
 
 	
-	<script src="../script/controllers/work.js"></script>
+	<script src="../scripts/controllers/work.js"></script>
 </div>
 </body>
 </html>
