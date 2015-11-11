@@ -1,9 +1,4 @@
 node_modules
 bower_components
-<<<<<<< HEAD
-dashboardServer/node_modules
-dashboardServer/npm-debug.log
-=======
-dashboardServer/npm-debug.log
-dashboardServer/node_modules
->>>>>>> chen
+dashboardServer
+npm-debug.log
