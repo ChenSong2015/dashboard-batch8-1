@@ -1,6 +1,6 @@
-var workApp = angular.module("DashboardApp", []);
+//var App = angular.module("DashboardApp", []);
 
-workApp.controller("WorkCtrl", function($scope, $http){
+App.controller("WorkCtrl", function($scope, $http){
 
 	var a={
 		author: "haziqhalimy",

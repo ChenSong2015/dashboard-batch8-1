@@ -15,7 +15,7 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http){
 		    var day = d.getDate();
 		    var month = d.getMonth()+1;
 		    var year = d.getFullYear();
-		    var dateString = day + "/" + mon.th + "/" + year;
+		    var dateString = day + "/" + month + "/" + year;
 			$('#navbar span:first-of-type + span').text(dateString);
 	    }).error(
 	    	function(data, status, headers, config) {
