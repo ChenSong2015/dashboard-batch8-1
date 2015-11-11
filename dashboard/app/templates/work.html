@@ -17,15 +17,15 @@
     		<li ng-click="setList()">List</li>
 			<li ng-click="setCard()">Card</li>
     	</ul>
-    	<input class="filter" type="text" placeholder="Name">
-    	<input class="filter" type="text" placeholder="Auther">
-    	<input class="filter" type="text" placeholder="Like">
-    	<input class="filter" type="text" placeholder="Comment">		
+    	<input class="filter" type="text" placeholder="Name" ng-model="name">
+    	<input class="filter" type="text" placeholder="Author" ng-model="author">
+    	<input class="filter" type="text" placeholder="Like" ng-model="like">
+    	<input class="filter" type="text" placeholder="Comment" ng-model="comment">		
 	</div>
 	<br>
 
 	<div class="content-card" ng-show="cardShow">
-		<div class="content" ng-repeat="content in contents track by $index">
+		<div class="content" ng-repeat="content in contents | filter: name track by $index ">
 			<img src={{"../"+content.image}} style="width:100%"><br>
 			<h3 style="margin-top:0;">{{content.title}}</h3>
 			<a href="" class="author" >{{content.author}}</a><br>
