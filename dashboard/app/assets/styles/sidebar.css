@@ -1,4 +1,4 @@
-#sidebar{
+.root #sidebar{
 	
 	width:15%;
 	height: 100%;
@@ -7,20 +7,21 @@
 	padding-top:40px;
 	padding-left: 30px; 
 }
-#navbar{
+.root #navbar{
 	width:100%;
 	background-color: #FFFFCF;
 	padding-top: 2px;
 	padding-bottom: 5px;
+	position: relative;
 
 
 }
-#navbar img{
+.root #navbar img{
 	display: inline-block;
 	margin-left: 2%;
 
 }
-#navbar nav div{
+.root #navbar nav div{
 	display: inline-block;
 	background-color:#FFFFCF;
 	position: absolute;
@@ -28,11 +29,11 @@
 	font-family: 'Crimson Text',Georgia, Times, serif;
 	font-size:16px;
 }
-#navbar button{
+.root #navbar button{
 	position: absolute;
 	right: 20px;
 }
-ul li{
+.root ul li{
 	margin-top: 10px;
 	font-family: 'Crimson Text',Georgia, Times, serif;
 	font-size:20px;
@@ -40,20 +41,62 @@ ul li{
 	padding:5px 5px;
 	padding-left:15px;
 }
-ul li:hover{
+.root ul li:hover{
 	background-color: #FF471A;
 	color:white;
 	transition:0.5s;
 }
-
-li span{
+.root ul li.active{
+	color:#FF471A;
+}
+.root ul li.active:hover{
+	color:white;
+}
+.root li span{
 	position: relative;
 	bottom: 3px;
 }
 
-#content{
+.root #content{
 	position:absolute;
 	margin-left: 20%;
 	width: 80%;
 	height: 100%;
+}
+.root #cover{
+	width:100%;
+	height:2000px;
+	background-color:black;
+	opacity:0.5;
+	z-index:1;
+	position:absolute;
+}
+.root #addItem, .root #editItem, .root #deleteItem{
+	width: 40%;
+	position: absolute;
+	margin-left:30%;
+	margin-top:10%;
+	text-align: center;
+	background-color:white;
+	font-family: 'Crimson Text',Georgia, Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	z-index:2;
+	padding: 10px 10px;
+	outline:orange;
+	border-radius: 5px; 
+}
+.root #addItem input, .root #editItem, .root #deleteItem input{
+	margin-top: 10px;
+}
+.root .btn{
+	float: left;
+	margin-top: 10px;
+	margin-right:10px;
+	padding:0px 5px;
+}
+.root #deleteItem .btn{
+	float:right;
+	margin-right: 0px;
+	margin-left:10px;
 }

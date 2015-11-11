@@ -1,46 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>root</title>
-	<link href="http://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css">
-  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="../../bower_components/angular/angular.min.js"></script>
-	<script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  	<script src="../scripts/controllers/root.js"></script>
-  	<link rel="stylesheet" type="text/css" href="../assets/styles/sidebar.css">
-  
-</head>
-<body style="margin:0px" ng-app="root_partial">
+
+<div style="margin:0px" class="root" ng-controller="userInfo">
+	<div id="cover" ng-show=false></div>
+	<div id="addItem" ng-show=false>
+		<span style="font-size: 25px;">Add item</span>
+		<form name="add">
+			<input type="text" ng-model="title" class="form-control" placeholder="Title" required >
+			<input type="text" ng-model="author" class="form-control" placeholder="Author" required>
+			<input type="text" ng-model="like" class="form-control" placeholder="Like" required >
+			<input type="text" ng-model="comment" class="form-control" placeholder="Comment" required>
+			<button type="submit" class="btn btn-success" ng-click="Addsubmit()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
+			<button type="submit" class="btn btn-default" ng-click="addCancel()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
+	</div>
+	<div id="editItem" ng-show=false>
+		<span style="font-size: 25px;">Edit item</span>
+		<form name="edit">
+			<input type="text" ng-model="lineOne" class="form-control" placeholder="" required >
+			<input type="text" ng-model="lineTwo" class="form-control" placeholder="" required>
+			<input type="text" ng-model="lineThree" class="form-control" placeholder="" required >
+			<input type="text" ng-model="lineFour" class="form-control" placehold`er="" required>
+			<button type="submit" class="btn btn-success" ng-click="editSubmit()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
+			<button type="submit" class="btn btn-default" ng-click="editCancel()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
+	</div>
+	<div id="deleteItem" ng-show=false>
+		<span style="font-size: 25px;">Delete item?</span><hr>
+		<span>This will permanently delete the item from the table and the action cannot be reversed. If you are sure, please confirm with the appropriate action</span><hr>
+		<button type="submit" class="btn btn-success" ng-click="deleteSubmit()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
+		<button type="submit" class="btn btn-default" ng-click="deleteCancel()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
+	</div>
 	<div id="navbar">
 		<nav>
 			<img src="../assets/images/app/logo.png">
 			<div>
-				<span style="margin-left:20px">Moyu Liang</span>
-				<span style="margin-left:5px;"> 2015/11/5</span>
+				<span style="margin-left:20px"></span>
+				<span style="margin-left:5px;"></span>
 			</div>
-			<button type="button" class="btn btn-success">Log Out</button>
+			<button type="button" class="btn btn-success" ng-click="logout()">Log Out</button>
 		</nav>
 	</div>
 	<div id = "sidebar">
 		<ul class="list-unstyled">
-			<li id="ov"><span class="glyphicon glyphicon-cloud"></span> &nbsp;<span ui-sref="overview"> Overview</span></li>
-			<li id="work"><span class="glyphicon glyphicon-tag"></span> &nbsp;<span ui-sref="work"> Work</span></li>
-			<li id="producer"><span class="glyphicon glyphicon-tint"></span> &nbsp;<span ui-sref="producer"> Producer</span></li>
-			<li><span class="glyphicon glyphicon-th-large"></span> &nbsp;<span ui-sref="contact"> Contact</span></li>
+			<li id="ov" ui-sref-active="active"><span class="glyphicon glyphicon-cloud"></span> &nbsp;<span ui-sref="root.overview"> Overview</span></li>
+			<li id="work" ui-sref-active="active"><span class="glyphicon glyphicon-tag"></span> &nbsp;<span ui-sref="root.work"> Work</span></li>
+			<li id="producer" ui-sref-active="active"><span class="glyphicon glyphicon-tint"></span> &nbsp;<span ui-sref="root.producer"> Producer</span></li>
+			<li ui-sref-active="active"><span class="glyphicon glyphicon-th-large"></span> &nbsp;<span ui-sref="root.contact"> Contact</span></li>
 		</ul>
 	</div>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("ul li").click(function(){
-				$("ul li").css("color","black");
-				$(this).css("color","#FF471A");
-			})
-		});
-		
-	</script>
 	<div id = "content" ui-view></div>
-</body>
-</html>
+</div>

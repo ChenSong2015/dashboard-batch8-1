@@ -1,38 +1,45 @@
-body {
+
+.login{
 	background-image: url("../images/app/background2.jpg");
-    background-attachment: fixed;
-}
 
-div {
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100%; 
+    height: 100%
+}
+.login .alert{
+	padding: 5px;
+}
+.login #loginDiv{
+	width: 500px;
 	margin: auto;
-	margin-top: 15%;
-	width: 500px;
+	margin-top: 10%;
 	text-align: center;
+	color:white;
+	font-family: 'Crimson Text',Georgia, Times, serif;
+	font-size: 16px;
+	font-weight: bold;
 }
-
-h1 {
-	color: white;
+.login div input,.login div button{
+	width: 100%;
 }
-
-input {
-	
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border-radius: 6px;
-	font-size: 150%;
-	padding: 8px 5px 8px 5px;
-	border: none;
+.login .alert-danger {
+	color:white;
+	background-color:#FF3300;
 }
-
-#user {
-	width: 490px;
+.login button span,.login.form-control::-webkit-input-placeholder { 
+	font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
+	font-size: 16px;
 }
-
-#pass{
-	width: 490px;
-}
-
-#sub {
-	width: 500px;
-	background: lightgreen;
+.login .form-control:-moz-placeholder { font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
+	font-size: 16px; }
+.login .form-control::-moz-placeholder { font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
+	font-size: 16px; }
+.login .form-control:-ms-input-placeholder { font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
+	font-size: 16px; }
+.login #loginDiv button span{
+	style="font-family: 'Crimson Text',Georgia, Times, serif; 
+	font-size: 20px;
 }
