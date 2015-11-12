@@ -65,11 +65,13 @@
 }
 .root #cover{
 	width:100%;
-	height:2000px;
-	background-color:black;
-	opacity:0.5;
+	height:100%;
+	//background-color:black;
+	background-color: rgba(0,0,0,0.5);
+	//opacity:0.5;
 	z-index:1;
 	position:absolute;
+
 }
 .root #addItem, .root #editItem, .root #deleteItem{
 	width: 40%;
@@ -81,10 +83,11 @@
 	font-family: 'Crimson Text',Georgia, Times, serif;
 	font-size: 16px;
 	font-weight: bold;
-	z-index:2;
+	
 	padding: 10px 10px;
 	outline:orange;
 	border-radius: 5px; 
+	opacity:1;
 }
 .root #addItem input, .root #editItem, .root #deleteItem input{
 	margin-top: 10px;

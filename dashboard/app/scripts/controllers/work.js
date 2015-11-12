@@ -1,6 +1,7 @@
-//var App = angular.module("DashboardApp", []);
+// var App = angular.module("DashboardApp", []);
 
-App.controller("WorkCtrl", function($scope, $http){
+// App.controller("WorkCtrl", function($scope, $http){
+App.controller("userInfo", function($scope, $http){
 
 	var a={
 		author: "haziqhalimy",
@@ -34,7 +35,11 @@ App.controller("WorkCtrl", function($scope, $http){
 		$scope.visible=!$scope.visible;
 	}
 	$scope.addItem=function(data) {
-		($scope.contents).push(a);
+		$scope.backcoverShow=true;
+		$scope.addShow=true;
+		$("body").css('overflow','hidden');
+		//($scope.contents).push(a);
 	}
+
 
 });
