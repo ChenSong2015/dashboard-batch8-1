@@ -1,0 +1,17 @@
+<div class="background">
+    <div class="logincontent" ng-controller="LoginController">
+        <h1>Login</h1>
+        <hr>
+        <div ng-show="error" class="alert alert-danger">{{error}}</div>
+        <form name="loginform" ng-submit="submitForm(loginform.$valid)" novalidate>
+            <div class="form-group" ng-class="{'has-error':loginform.username.$invalid&&!loginform.username.$pristine}">
+                <input name="username" id="user" type="text" ng-model="user.username" placeholder="Username" required>
+            </div>
+            <div class="form-group" ng-class="{'has-error':loginform.password.$invalid && !loginform.password.$pristine }">
+                <input name="password" id="pass" type="password" ng-model="user.password" placeholder="Password" required>
+            </div>
+            <br>
+            <button class="btn btn-default" id="sub" type="submit" ng-disabled="loginform.$invalid">Login</button>
+        </form>
+    </div>
+</div>
