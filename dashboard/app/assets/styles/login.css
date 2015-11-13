@@ -1,7 +1,23 @@
+@media screen and (max-width: 430px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 431px) {
+    .login-container {
+        width: 400px;
+    }
+}
+
 .background {
     background-image: url("../images/app/background2.jpg");
     background-attachment: fixed;
     background-size: cover;
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 .logincontent {
