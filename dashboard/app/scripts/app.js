@@ -15,7 +15,8 @@ App.config(function($stateProvider, $urlRouterProvider){
 		})
 		.state("root.work",{
 			url:"/work",
-			templateUrl:"../templates/work.html"
+			templateUrl: "../templates/work.html", 
+			controller: "WorkCtrl"
 		})
 		.state("root.producer",{
 			url:"/producer",
@@ -26,4 +27,4 @@ App.config(function($stateProvider, $urlRouterProvider){
 			templateUrl:"../templates/contact.html"
 		})
 		$urlRouterProvider.otherwise("/login")
-})
+});

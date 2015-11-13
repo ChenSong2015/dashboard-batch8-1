@@ -1,5 +1,6 @@
 
 App.controller('userInfo',function($scope,$cookieStore,$location,$http){
+	console.log("root");
 	var auth = $cookieStore.get("username");
 	if(auth!="minh"&&auth!="darth"){
 		$location.path("/login");
@@ -11,6 +12,7 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http){
 	$http.get('http://localhost:3000/api/getuser', users).success(
 		function(data, status, headers, config) {
 			$('#navbar span:first-of-type').text(data.name);
+			console.log(data);
 			var d = new Date();
 		    var day = d.getDate();
 		    var month = d.getMonth()+1;
