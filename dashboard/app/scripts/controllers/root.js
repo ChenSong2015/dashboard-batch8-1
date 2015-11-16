@@ -7,6 +7,12 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http, AddEditD
 		$scope.editShow=AddEditDel.getEdit();
 		$scope.delShow=AddEditDel.getDel();
 	});
+	$scope.$on('editItem', function(e){
+		$scope.backcoverShow=AddEditDel.getBack();
+		$scope.addShow=AddEditDel.getAdd();
+		$scope.editShow=AddEditDel.getEdit();
+		$scope.delShow=AddEditDel.getDel();
+	});
 	$scope.$on('delItem', function(e){
 		$scope.backcoverShow=AddEditDel.getBack();
 		$scope.addShow=AddEditDel.getAdd();
@@ -14,8 +20,8 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http, AddEditD
 		$scope.delShow=AddEditDel.getDel();
 	});
 
-	$scope.add=function(flag) {
-		if(flag==1){
+	$scope.addSubmit=function(flag) {
+		if(flag=="submit"){
 			var addContent={};
 			addContent.title=$scope.addTitle;
 			addContent.author=$scope.addAuthor;
@@ -43,14 +49,23 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http, AddEditD
 		$scope.editShow=AddEditDel.getEdit();
 		$scope.delShow=AddEditDel.getDel();
 	};
-	// $scope.cancel=function() {
-	// 	AddEditDel.setFlag(false, false, false, false);
-	// 	$scope.backcoverShow=AddEditDel.getBack();
-	// 	$scope.addShow=AddEditDel.getAdd();
-	// 	$scope.editShow=AddEditDel.getEdit();
-	// 	$scope.delShow=AddEditDel.getDel();
-	// 	$scope.$broadcast("cancel");
-	// };
+	$scope.editSubmit=function(flag) {
+		if(flag==1){
+			var editContent={};
+			editContent.title=$scope.editTitle;
+			editContent.author=$scope.editAuthor;
+			editContent.like=$scope.editLike;
+			editContent.comment=$scope.editComment;
+			$scope.$broadcast("editSubmit", editContent);
+		}else{
+			$scope.$broadcast("editSubmit", false);
+		}
+		AddEditDel.setFlag(false, false, false, false);		
+		$scope.backcoverShow=AddEditDel.getBack();
+		$scope.addShow=AddEditDel.getAdd();
+		$scope.editShow=AddEditDel.getEdit();
+		$scope.delShow=AddEditDel.getDel();
+	};
 
 
 
