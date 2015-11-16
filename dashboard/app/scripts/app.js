@@ -1,4 +1,4 @@
-var App = angular.module("DashboardApp",['ui.router','ngCookies']);
+var App = angular.module("DashboardApp",['ui.router','ngCookies','ngAnimate', 'ui.bootstrap']);
 App.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider
 		.state("login",{
