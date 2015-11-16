@@ -37,26 +37,42 @@ App.controller("WorkCtrl", function($scope, $http, AddEditDel){
 	$scope.addItem=function() {
 		AddEditDel.setFlag(true, true, false, false);
 		$scope.$emit('addItem');
-		$scope.$on("addSubmit", function(e, addContent) {
+		var myListener=$scope.$on("addSubmit", function(e, addContent) {
 			if(addContent==false) {
+				xx=1;
 			}else{
 				$scope.contents.push(addContent);
 			}
+			myListener();
 		});
 	}
 	
 	$scope.editItem=function() {
-		//AddEditDel.setFlag(true, false, true, false);
+		var index=$scope.contents.indexOf(this.content);
+		AddEditDel.setFlag(true, false, true, false);
+		$scope.$emit('delItem');
+		var myListener=$scope.$on("editSubmit", function(e, editContent) {
+			if(editContent==false) {
+			}else{
+				$scope.contents[index].title=editContent.title;
+				$scope.contents[index].author=editContent.author;
+				$scope.contents[index].like=editContent.like;
+				$scope.contents[index].comment=editContent.comment;
+			}
+			myListener();
+		});
 	}
 	$scope.delItem=function() {
-		//AddEditDel.setFlag(true, false, false, true);
-		//$scope.$emit('delItem');
-		//$scope.$on("deleteSubmit", function(e, flag) {
-		//	if(flag==false) {
-		//	}else{
-				$scope.contents.splice($scope.contents.indexOf(this.content), 1);
-		//	}	
-		//});
+		var index=$scope.contents.indexOf(this.content);
+		AddEditDel.setFlag(true, false, false, true);
+		$scope.$emit('delItem');
+		var myListener=$scope.$on("deleteSubmit", function(e, flag) {
+			if(flag==false) {
+			}else{
+				$scope.contents.splice(index, 1);
+			}
+			myListener();
+		});
 	}
 	
 
