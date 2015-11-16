@@ -1,6 +1,6 @@
  // var App = angular.module("DashboardApp", []);
 
-App.controller("WorkCtrl", function($scope, $http){
+App.controller("WorkCtrl", function($scope, $http, AddEditDel){
 //App.controller("userInfo", function($scope, $http){
 
 	var a={
@@ -34,13 +34,32 @@ App.controller("WorkCtrl", function($scope, $http){
 		$scope.listShow=false;
 		$scope.visible=!$scope.visible;
 	}
-	$scope.addItem=function(data) {
-		console.log($scope.backcoverShow);
-		$scope.backcoverShow=true;
-		$scope.addShow=true;
-		//$("body").css('overflow','hidden');
-		($scope.contents).push(a);
+	$scope.addItem=function() {
+		AddEditDel.setFlag(true, true, false, false);
+		$scope.$emit('addItem');
+		$scope.$on("addSubmit", function(e, addContent) {
+			if(addContent==false) {
+			}else{
+				$scope.contents.push(addContent);
+			}
+		});
 	}
+	
+	$scope.editItem=function() {
+		//AddEditDel.setFlag(true, false, true, false);
+	}
+	$scope.delItem=function() {
+		//AddEditDel.setFlag(true, false, false, true);
+		//$scope.$emit('delItem');
+		//$scope.$on("deleteSubmit", function(e, flag) {
+		//	if(flag==false) {
+		//	}else{
+				$scope.contents.splice($scope.contents.indexOf(this.content), 1);
+		//	}	
+		//});
+	}
+	
+
 
 
 });

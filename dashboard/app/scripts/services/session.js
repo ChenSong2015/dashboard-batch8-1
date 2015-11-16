@@ -7,23 +7,38 @@ App.factory("AddEditDel", function() {
 	};
 
 	return {
-		add: function() {
-			showFlag.backcoverShow=true;
-			showFlag.addShow=true;
+		getBack: function() {
+			return showFlag.backcoverShow;
 		},
-		edit: function() {
-			showFlag.backcoverShow=true;
-			showFlag.editShow=true;
+		getAdd: function() {
+			return showFlag.addShow;
 		},
-		del: function() {
-			showFlag.backcoverShow=true;
-			showFlag.delShow=true;
+		getEdit: function() {
+			return showFlag.editShow;
 		},
-		cancel: function() {
-			showFlag.backcoverShow=false;
-			showFlag.addShow=false;
-			showFlag.editShow=false;
-			showFlag.delShow=false;
+		getDel: function() {
+			return showFlag.delShow;
 		},
+		setFlag: function(back, add, edit, del) {
+			showFlag.backcoverShow=back;
+			showFlag.addShow=add;
+			showFlag.editShow=edit;
+			showFlag.delShow=del;
+		},
+	};
+});
+
+App.factory("Dialog", function() {
+	var submit=false;
+	var cancel=false;
+	var content;
+
+	return {
+		getContent: function() {
+			return content;
+		},
+		setContent: function(newContent) {
+			content=newContent;
+		}
 	};
 });

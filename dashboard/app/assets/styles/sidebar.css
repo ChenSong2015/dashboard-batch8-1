@@ -70,7 +70,7 @@
 	background-color: rgba(0,0,0,0.5);
 	//opacity:0.5;
 	z-index:1;
-	position:absolute;
+	position:fixed;
 
 }
 .root #addItem, .root #editItem, .root #deleteItem{
@@ -89,7 +89,7 @@
 	border-radius: 5px; 
 	opacity:1;
 }
-.root #addItem input, .root #editItem, .root #deleteItem input{
+.root #addItem input, .root #editItem input, .root #deleteItem input{
 	margin-top: 10px;
 }
 .root .btn{

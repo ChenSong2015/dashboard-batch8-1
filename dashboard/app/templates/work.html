@@ -29,13 +29,13 @@
 
 	<div class="content-card" ng-show="cardShow">
 		<div class="content" ng-repeat="content in contents | filter: search track by $index">
-			<img src={{"../"+content.image}} style="width:100%"><br>
+			<img ng-src="../{{content.image}}" style="width:100%"><br>
 			<h3 style="margin-top:0;">{{content.title}}</h3>
 			<a href="" class="author" >{{content.author}}</a><br>
 			<span>{{content.like}}</span><br>
 			<span>{{content.comment}}</span><br>
-			<span style="float:right"><a href="">Edit</a> | 
-			<a href="">Delete</a></span>
+			<span style="float:right"><a href="" ng-click="editItem()">Edit</a> | 
+			<a href="" ng-click="delItem()">Delete</a></span>
 		</div>
 	</div>
 
@@ -55,8 +55,8 @@
 				<td>{{content.author}}</td>
 				<td>{{content.like}}</td>
 				<td>{{content.comment}}</td>
-				<td><a href="" >Edit</a></td>
-				<td><a href="" >Delete</a></td>
+				<td><a href="" ng-click="editItem()">Edit</a></td>
+				<td><a href="" ng-click="delItem()">Delete</a></td>
 			</tr>
 			</tbody>
 		</table>

@@ -4,30 +4,30 @@
 	<div id="addItem" ng-show="addShow">
 		<span style="font-size: 25px;">Add item</span>
 		<form name="add">
-			<input type="text" ng-model="title" class="form-control" placeholder="Title" required >
-			<input type="text" ng-model="author" class="form-control" placeholder="Author" required>
-			<input type="text" ng-model="like" class="form-control" placeholder="Like" required >
-			<input type="text" ng-model="comment" class="form-control" placeholder="Comment" required>
-			<button type="submit" class="btn btn-success" ng-click="Addsubmit()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
-			<button type="submit" class="btn btn-default" ng-click="addCancel()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
+			<input type="text" ng-model="addTitle" class="form-control" placeholder="Title" required >
+			<input type="text" ng-model="addAuthor" class="form-control" placeholder="Author" required>
+			<input type="text" ng-model="addLike" class="form-control" placeholder="Like" required >
+			<input type="text" ng-model="addComment" class="form-control" placeholder="Comment" required>
+			<button type="submit" class="btn btn-success" ng-click="add(1)" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
+			<button type="submit" class="btn btn-default" ng-click="add(0)" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
 		</form>
 	</div>
 	<div id="editItem" ng-show="editShow">
 		<span style="font-size: 25px;">Edit item</span>
 		<form name="edit">
-			<input type="text" ng-model="lineOne" class="form-control" placeholder="" required >
-			<input type="text" ng-model="lineTwo" class="form-control" placeholder="" required>
-			<input type="text" ng-model="lineThree" class="form-control" placeholder="" required >
-			<input type="text" ng-model="lineFour" class="form-control" placehold`er="" required>
-			<button type="submit" class="btn btn-success" ng-click="editSubmit()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
-			<button type="submit" class="btn btn-default" ng-click="editCancel()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
+			<input type="text" ng-model="editTitle" class="form-control" placeholder="Title" required >
+			<input type="text" ng-model="editAuthor" class="form-control" placeholder="Author" required>
+			<input type="text" ng-model="editLike" class="form-control" placeholder="Like" required >
+			<input type="text" ng-model="editComment" class="form-control" placeholder="Comment" required>
+			<button type="submit" class="btn btn-success" ng-click="edit(1)" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
+			<button type="submit" class="btn btn-default" ng-click="edit(0)" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
 		</form>
 	</div>
 	<div id="deleteItem" ng-show="delShow">
 		<span style="font-size: 25px;">Delete item?</span><hr>
 		<span>This will permanently delete the item from the table and the action cannot be reversed. If you are sure, please confirm with the appropriate action</span><hr>
-		<button type="submit" class="btn btn-success" ng-click="deleteSubmit()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
-		<button type="submit" class="btn btn-default" ng-click="deleteCancel()" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
+		<button type="submit" class="btn btn-success" ng-click="delete(1)" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;">submit</span></button>
+		<button type="submit" class="btn btn-default" ng-click="delete(0)" ng-disabled="login.$invalid"><span style="font-family: 'Crimson Text',Georgia, Times, serif; font-size: 17px;color:black">cancel</span></button>
 	</div>
 	</div>
 	<div id="navbar">

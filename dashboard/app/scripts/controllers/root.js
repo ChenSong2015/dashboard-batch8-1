@@ -1,7 +1,60 @@
 
-App.controller('userInfo',function($scope,$cookieStore,$location,$http){
-	console.log("root");
+App.controller('userInfo',function($scope,$cookieStore,$location,$http, AddEditDel){
 	var auth = $cookieStore.get("username");
+	$scope.$on('addItem', function(e){
+		$scope.backcoverShow=AddEditDel.getBack();
+		$scope.addShow=AddEditDel.getAdd();
+		$scope.editShow=AddEditDel.getEdit();
+		$scope.delShow=AddEditDel.getDel();
+	});
+	$scope.$on('delItem', function(e){
+		$scope.backcoverShow=AddEditDel.getBack();
+		$scope.addShow=AddEditDel.getAdd();
+		$scope.editShow=AddEditDel.getEdit();
+		$scope.delShow=AddEditDel.getDel();
+	});
+
+	$scope.add=function(flag) {
+		if(flag==1){
+			var addContent={};
+			addContent.title=$scope.addTitle;
+			addContent.author=$scope.addAuthor;
+			addContent.like=$scope.addLike;
+			addContent.comment=$scope.addComment;
+			$scope.$broadcast("addSubmit", addContent);
+		}else{
+			$scope.$broadcast("addSubmit", false);
+		}
+		AddEditDel.setFlag(false, false, false, false);
+		$scope.backcoverShow=AddEditDel.getBack();
+		$scope.addShow=AddEditDel.getAdd();
+		$scope.editShow=AddEditDel.getEdit();
+		$scope.delShow=AddEditDel.getDel();
+	};
+	$scope.delete=function(flag) {
+		if(flag==1){
+			$scope.$broadcast("deleteSubmit", true);
+		}else{
+			$scope.$broadcast("deleteSubmit", false);
+		}
+		AddEditDel.setFlag(false, false, false, false);		
+		$scope.backcoverShow=AddEditDel.getBack();
+		$scope.addShow=AddEditDel.getAdd();
+		$scope.editShow=AddEditDel.getEdit();
+		$scope.delShow=AddEditDel.getDel();
+	};
+	// $scope.cancel=function() {
+	// 	AddEditDel.setFlag(false, false, false, false);
+	// 	$scope.backcoverShow=AddEditDel.getBack();
+	// 	$scope.addShow=AddEditDel.getAdd();
+	// 	$scope.editShow=AddEditDel.getEdit();
+	// 	$scope.delShow=AddEditDel.getDel();
+	// 	$scope.$broadcast("cancel");
+	// };
+
+
+
+
 	if(auth!="minh"&&auth!="darth"){
 		$location.path("/login");
 	}
@@ -12,7 +65,6 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http){
 	$http.get('http://localhost:3000/api/getuser', users).success(
 		function(data, status, headers, config) {
 			$('#navbar span:first-of-type').text(data.name);
-			console.log(data);
 			var d = new Date();
 		    var day = d.getDate();
 		    var month = d.getMonth()+1;
