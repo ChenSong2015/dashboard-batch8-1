@@ -33,7 +33,7 @@
 	position: absolute;
 	right: 20px;
 }
-.root ul li{
+#sidebar ul li{
 	margin-top: 10px;
 	font-family: 'Crimson Text',Georgia, Times, serif;
 	font-size:20px;
@@ -41,18 +41,18 @@
 	padding:5px 5px;
 	padding-left:15px;
 }
-.root ul li:hover{
+#sidebar ul li:hover{
 	background-color: #FF471A;
 	color:white;
 	transition:0.5s;
 }
-.root ul li.active{
+#sidebar ul li.active{
 	color:#FF471A;
 }
-.root ul li.active:hover{
+#sidebar ul li.active:hover{
 	color:white;
 }
-.root li span{
+#sidebar li span{
 	position: relative;
 	bottom: 3px;
 }
