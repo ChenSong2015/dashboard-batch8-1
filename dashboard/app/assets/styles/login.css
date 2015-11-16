@@ -1,45 +1,72 @@
+@media screen and (max-width: 320px) {
+    .login {
+        width: 90%;
+    }
+}
 
-.login{
-	background-image: url("../images/app/background2.jpg");
+@media screen and (min-width: 321px) {
+    .login {
+        width: 400px;
+    }
+}
 
-	background-repeat: no-repeat;
+.login {
+    background-image: url("../images/app/background2.jpg");
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: fixed;
-    width: 100%; 
+    width: 100%;
     height: 100%
 }
-.login .alert{
-	padding: 5px;
+
+.login .alert {
+    padding: 5px;
 }
-.login #loginDiv{
-	width: 500px;
-	margin: auto;
-	margin-top: 10%;
-	text-align: center;
-	color:white;
-	font-family: 'Crimson Text',Georgia, Times, serif;
-	font-size: 16px;
-	font-weight: bold;
+
+.login #loginDiv {
+    width: 500px;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size: 16px;
+    font-weight: bold;
 }
-.login div input,.login div button{
-	width: 100%;
+
+.login div input,
+.login div button {
+    width: 100%;
 }
+
 .login .alert-danger {
-	color:white;
-	background-color:#FF3300;
+    color: white;
+    background-color: #FF3300;
 }
-.login button span,.login.form-control::-webkit-input-placeholder { 
-	font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
-	font-size: 16px;
+
+.login button span,
+.login.form-control::-webkit-input-placeholder {
+    font-family: font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size: 16px;
 }
-.login .form-control:-moz-placeholder { font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
-	font-size: 16px; }
-.login .form-control::-moz-placeholder { font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
-	font-size: 16px; }
-.login .form-control:-ms-input-placeholder { font-family: font-family: 'Crimson Text',Georgia, Times, serif; 
-	font-size: 16px; }
-.login #loginDiv button span{
-	style="font-family: 'Crimson Text',Georgia, Times, serif; 
-	font-size: 20px;
+
+.login .form-control:-moz-placeholder {
+    font-family: font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size: 16px;
+}
+
+.login .form-control::-moz-placeholder {
+    font-family: font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size: 16px;
+}
+
+.login .form-control:-ms-input-placeholder {
+    font-family: font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size: 16px;
+}
+
+.login #loginDiv button span {
+    style="font-family: 'Crimson Text',Georgia, Times, serif; 
+ font-size: 20px;
 }
