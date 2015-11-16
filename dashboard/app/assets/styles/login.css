@@ -1,11 +1,11 @@
 @media screen and (max-width: 430px) {
-    .login-container {
+    .logincontent {
         width: 90%;
     }
 }
 
 @media screen and (min-width: 431px) {
-    .login-container {
+    .logincontent {
         width: 400px;
     }
 }
