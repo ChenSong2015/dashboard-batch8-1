@@ -3,15 +3,6 @@
 App.controller("WorkCtrl", function($scope, $http, AddEditDel){
 //App.controller("userInfo", function($scope, $http){
 
-	var a={
-		author: "haziqhalimy",
-		comment: "174 comments",
-		id: "001",
-		image: "assets/images/work/1.jpg",
-		like: "12,774 likes",
-		title: "Journey in Central Park"
-	}
-
 	$http.get('http://localhost:3000/api/work').success(function(data, status, headers, config) {
 		$scope.contents=data.works;
 	}).error(function(data, status, headers, config) {
@@ -74,8 +65,4 @@ App.controller("WorkCtrl", function($scope, $http, AddEditDel){
 			myListener();
 		});
 	}
-	
-
-
-
 });
