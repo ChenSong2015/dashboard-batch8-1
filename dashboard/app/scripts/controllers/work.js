@@ -30,7 +30,6 @@ App.controller("WorkCtrl", function($scope, $http, AddEditDel){
 		$scope.$emit('addItem');
 		var myListener=$scope.$on("addSubmit", function(e, addContent) {
 			if(addContent==false) {
-				xx=1;
 			}else{
 				$scope.contents.push(addContent);
 			}

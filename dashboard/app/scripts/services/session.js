@@ -27,18 +27,3 @@ App.factory("AddEditDel", function() {
 		},
 	};
 });
-
-App.factory("Dialog", function() {
-	var submit=false;
-	var cancel=false;
-	var content;
-
-	return {
-		getContent: function() {
-			return content;
-		},
-		setContent: function(newContent) {
-			content=newContent;
-		}
-	};
-});
