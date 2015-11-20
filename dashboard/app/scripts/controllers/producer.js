@@ -7,6 +7,10 @@ App.controller('producerCtrl', function ($scope, $window,$http,$timeout) {
 	  };
 	  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	}
-	google.maps.event.addDomListener(window, 'load', initialize);
+
+	//setTimeout(function() {
+		google.maps.event.addDomListener(window, 'load', initialize);
+		//}, 1000);
+	
  })
 
