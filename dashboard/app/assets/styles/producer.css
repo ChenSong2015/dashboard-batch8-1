@@ -47,8 +47,8 @@
 	border-radius: 5px;
 	color: white;
 }
-.producer #googleMap{
-	width:500px;
-	height:380px;
-
+.producer #map{
+	width: 30%;
+	height:30%;
+	float: right;
 }
