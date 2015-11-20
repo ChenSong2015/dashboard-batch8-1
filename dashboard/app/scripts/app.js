@@ -21,7 +21,9 @@ App.config(function($stateProvider, $urlRouterProvider){
 		.state("root.producer",{
 			url:"/producer",
 			templateUrl:"../templates/producer.html",
+
 			controller:"producerCtrl"
+
 		})
 		.state("root.contact",{
 			url:"/contact",
