@@ -1,1 +1,20 @@
-this is producer
+<div class = "producer"  id = "producer" ng-controller="producerCtrl" >
+	<div id="headDiv">
+		<div>
+			<span>Football is all about</span>
+			<span>fun, dream, belief</span>
+		</div>
+	</div>
+	<div id="articleContent">
+		<span ng-click="getOverview()" ui-sref="root.overview" ui-sref-active="active">Overview</span>
+		<span ui-sref="root.work" ui-sref-active="active">Work</span>
+		<span ui-sref="root.overview" ui-sref-active="active">Article</span>
+		<span ui-sref="root.overview" ui-sref-active="active">Viedo</span>
+		<span ui-sref="root.contact" ui-sref-active="active">Contact</span>
+	</div>
+	<div id="googleMap" style="width:500px;height:380px;"></div>
+	<script type="text/javascript">
+
+    </script>
+
+</div>

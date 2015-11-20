@@ -1,0 +1,54 @@
+.producer #headDiv{
+	width:100% ;
+	height: 300px;
+	background-image: url("../images/app/gigs.jpg");
+	background-size: 100%;
+	text-align: center;
+}
+.producer #headDiv div{
+	width:40%;
+	height:300px;
+	float: right;
+	background-color: rgba(0,0,0,0.5);
+	
+}
+.producer #headDiv span:nth-child(1){
+	margin-top: 30%;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	display: block;
+}
+.producer #headDiv span:nth-child(2){
+	color: red;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: 0;
+	font-style: italic;
+	display: block;
+	margin-left: 30%;
+}
+.producer #articleContent{
+	color:black;
+	font-family: 'Crimson Text', Georgia, Times, serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 14px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid orange; 
+}
+.producer #articleContent span{
+	transition:0.5s;
+	padding: 15px 15px;
+}
+.producer #articleContent span:hover{
+	background-color: #ff3333;
+	border-radius: 5px;
+	color: white;
+}
+.producer #googleMap{
+	width:500px;
+	height:380px;
+
+}
