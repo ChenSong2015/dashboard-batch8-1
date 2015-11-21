@@ -1,3 +1,9 @@
+.producer{
+	background: #f9f9f9;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
 .producer #headDiv{
 	width:100% ;
 	height: 300px;
@@ -29,26 +35,75 @@
 	display: block;
 	margin-left: 30%;
 }
-.producer #articleContent{
+.producer #nav{
 	color:black;
 	font-family: 'Crimson Text', Georgia, Times, serif;
 	font-size: 20px;
 	font-weight: bold;
-	margin-top: 14px;
-	padding-bottom: 15px;
 	border-bottom: 1px solid orange; 
+	background-color: white;
 }
-.producer #articleContent span{
+.producer #nav span{
 	transition:0.5s;
 	padding: 15px 15px;
+	display: inline-block;
 }
-.producer #articleContent span:hover{
+.producer #nav span:hover{
 	background-color: #ff3333;
 	border-radius: 5px;
 	color: white;
 }
-.producer #map{
-	width: 30%;
-	height:30%;
-	float: right;
+.producer #files{
+	margin-top: 30px;
 }
+.producer #map{
+	margin-top: 30px;
+	width:30%;
+	padding: 1% 1%;
+	border:1px solid #e6e6e6;
+	margin-left: 70%;
+	background-color: white;
+	
+}
+.producer #googleMap{
+	width: 100%;
+	height:300px;
+	display: block;
+}
+
+
+
+      
+.producer #map {
+    height: 100%;
+}
+.producer .controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.producer #pac-input {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 11px 0 13px;
+}
+
+.producer #pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.producer .pac-container {
+  font-family: Roboto;
+}
+.producer element.style{
+	left:80px;
+}
+
+

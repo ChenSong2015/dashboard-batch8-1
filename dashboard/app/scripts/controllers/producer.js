@@ -1,16 +1,4 @@
-App.controller('producerCtrl', function ($scope, $window,$http,$timeout) {
-	function initialize() {
-	  var mapProp = {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
-	    zoom:5,
-	    mapTypeId:google.maps.MapTypeId.ROADMAP
-	  };
-	  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-	}
+App.controller('producerCtrl', function ($scope, $window) {
 
-	//setTimeout(function() {
-		google.maps.event.addDomListener(window, 'load', initialize);
-		//}, 1000);
-	
  })
 

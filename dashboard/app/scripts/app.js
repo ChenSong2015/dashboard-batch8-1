@@ -22,7 +22,7 @@ App.config(function($stateProvider, $urlRouterProvider){
 			url:"/producer",
 			templateUrl:"../templates/producer.html",
 
-			controller:"producerCtrl"
+			
 
 		})
 		.state("root.contact",{
