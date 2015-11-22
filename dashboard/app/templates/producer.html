@@ -12,12 +12,16 @@
 		<span ui-sref="root.overview" ui-sref-active="active">Article</span>
 		<span ui-sref="root.overview" ui-sref-active="active">Viedo</span>
 		<span ui-sref="root.contact" ui-sref-active="active">Contact</span>
-		<span style=""></span>
+		
 	</div>
 	
 	<div id="map">
-		<span class="glyphicon glyphicon-search"></span>
-	    <input id="pac-input" class="controls" type="text" placeholder="Search Box" ng-style={'width':'150px'}></span>
+		<span class="glyphicon glyphicon-search" ng-mouseout = "queryShow = false" ng-mouseover="search()" s></span>
+		<span ng-show="queryShow" class="check-element animate-show" >
+		    Football fields around you ?<br>
+		    Press "Enter" !
+  		</span >
+	    <input id="pac-input" class="controls" type="text" placeholder="Search Box" ng-style={'width':'150px'} ></span>
 	    <div id="googleMap"></div>
     </div>
 	    <script>
