@@ -1,7 +1,7 @@
-App.controller('producerCtrl', function ($scope, $window) {
+App.controller('producerCtrl', function ($timeout, $scope, $window) {
 	$scope.search = function(){
-		document.getElementById("pac-input").value = "football field";
 		$scope.queryShow = true;
+		document.getElementById("pac-input").value = "football field";
 	}
  })
 App.directive('s',function($timeout){
@@ -10,9 +10,12 @@ App.directive('s',function($timeout){
 		restrict:'A',
 		link:function(scope,element,attrs){
 			element.bind("mouseover",function(){
-				angular.element("#pac-input").focus();
+				$timeout(function(){
+					angular.element("#pac-input").focus();},1000);
+				
 			})
 			
+
 		}
 	}
 })
