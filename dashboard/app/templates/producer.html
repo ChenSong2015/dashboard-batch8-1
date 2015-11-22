@@ -9,20 +9,38 @@
 	<div id="nav">
 		<span ng-click="getOverview()" ui-sref="root.overview" ui-sref-active="active">Overview</span>
 		<span ui-sref="root.work" ui-sref-active="active">Work</span>
-		<span ui-sref="root.overview" ui-sref-active="active">Article</span>
-		<span ui-sref="root.overview" ui-sref-active="active">Viedo</span>
 		<span ui-sref="root.contact" ui-sref-active="active">Contact</span>
 		
 	</div>
-	
-	<div id="map">
-		<span class="glyphicon glyphicon-search" ng-mouseout = "queryShow = false" ng-mouseover="search()" s></span>
-		<span ng-show="queryShow" class="check-element animate-show" >
-		    Football fields around you ?<br>
-		    Press "Enter" !
-  		</span >
-	    <input id="pac-input" class="controls" type="text" placeholder="Search Box" ng-style={'width':'150px'} ></span>
-	    <div id="googleMap"></div>
+	<div id="rightSide">
+		<div id="map">
+			<span class="glyphicon glyphicon-search" ng-mouseout = "queryShow = false" ng-mouseover="search()" s></span>
+			<span ng-show="queryShow" class="check-element animate-show" >
+			    Football fields around you ?<br>
+			    Press "Enter" !
+	  		</span >
+		    <input id="pac-input" class="controls" type="text" placeholder="Search Box" ng-style={'width':'150px'} ></span>
+		    <div id="googleMap"></div>
+		    <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+	  			Share on Facebook
+			</a>
+	    </div>
+	    <div>
+		    <div style="display:inline-block; min-height:200px; margin-top:30px;width:100%">
+		      <uib-datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker>
+		    </div>
+		</div>
+    </div>
+    <div id="leftSide">
+    	<div ng-repeat = "v in videoObjects" >
+    		<iframe id="video" width="40%" ng-src="{{v.url|trustUrl}}" frameborder="0" allowfullscreen></iframe>
+    		<!-- <button  ng-click="play()">Click</button>{{videoUrl}} -->
+    		<div id="videoContent">
+    			<span>{{v.Name}}</span>
+    			<span>{{v.conclude}}</span>
+			</div>
+    		
+    	</div>
     </div>
 	    <script>
 		function initMap() {

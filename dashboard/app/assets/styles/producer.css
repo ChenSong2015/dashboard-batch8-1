@@ -3,6 +3,8 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+    position: absolute;
+    width: 100%
 }
 .producer #headDiv{
 	width:100% ;
@@ -56,9 +58,33 @@
 	color: white;
 	cursor:pointer;
 }
-.producer #files{
-	margin-top: 30px;
+.producer #rightSide{
+	width: 32%;
+	float: right;
 }
+.producer #leftSide{
+	width: 65%;
+	margin-top: 30px;
+	float: left;
+}
+.producer #leftSide div{
+	margin-bottom: 40px;
+	border:1px solid #e6e6e6;
+	background-color: white;
+	padding: 2% 2%;
+	position: relative;
+}
+.producer #leftSide div div{
+	display: inline;
+	width: 50%;
+	margin-left:5% ;
+	position:absolute;
+	border-style:none;
+	top:2%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+
 .producer #map span:nth-child(2){
 	color: orange;
 	font-family: 'Crimson Text', Georgia, Times, serif;
@@ -69,15 +95,18 @@
 	display: block;
 	
 }
+.producer .well{
+	background-color: white;
+}
 .producer #map{
 	margin-top: 30px;
-	width:30%;
+	width:100%;
 	padding: 1% 1%;
 	border:1px solid #e6e6e6;
-	margin-left: 70%;
 	background-color: white;
 	position:relative;
 	text-align: center;
+	border-radius: 3px;
 }
 .producer #googleMap{
 	width: 100%;
@@ -111,9 +140,6 @@
 .producer .pac-container {
   font-family: Roboto;
 }
-.producer #map{
-
-}
 
 .producer #map .glyphicon {
 	font-size: 25px;
@@ -145,5 +171,18 @@
   padding: 0 10px;
 }
 
+.producer #videoContent{
+	
+}
 
+.producer .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+.producer .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
 
