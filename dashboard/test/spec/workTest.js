@@ -51,5 +51,11 @@ describe('test workCtrl ngshow', function() {
 		});
 	});
 
+	discribe('test emit', function() {
+		beforeEach(function() {
+			spyOn(scope, "$emit");
+		});
+	});
+
 
 });
