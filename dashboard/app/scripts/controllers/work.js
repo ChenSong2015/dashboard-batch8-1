@@ -40,7 +40,7 @@ App.controller("WorkCtrl", function($scope, $http, AddEditDel){
 	$scope.editItem=function() {
 		var index=$scope.contents.indexOf(this.content);
 		AddEditDel.setFlag(true, false, true, false);
-		$scope.$emit('delItem');
+		$scope.$emit('editItem');
 		var myListener=$scope.$on("editSubmit", function(e, editContent) {
 			if(editContent==false) {
 			}else{
