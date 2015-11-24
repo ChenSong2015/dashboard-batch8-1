@@ -11,7 +11,7 @@ describe('logincontroller', function() {
     };
 
 
-    beforeEach(inject(function(_$controller_, _$httpBackend_, _$rootScope_, _$cookieStore_, _$location_, ) {
+    beforeEach(inject(function(_$controller_, _$httpBackend_, _$rootScope_, _$cookieStore_, _$location_) {
         $controller = _$controller_;
         $httpBackend = _$httpBackend_;
         $scope = _$rootScope_.$new();
