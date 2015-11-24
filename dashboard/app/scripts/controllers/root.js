@@ -67,7 +67,7 @@ App.controller('userInfo',function($scope,$cookieStore,$location,$http, AddEditD
 		$scope.delShow=AddEditDel.getDel();
 	};
 
-
+	
 
 
 	if(auth!="minh"&&auth!="darth"){

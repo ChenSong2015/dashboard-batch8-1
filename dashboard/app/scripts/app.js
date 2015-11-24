@@ -20,7 +20,10 @@ App.config(function($stateProvider, $urlRouterProvider){
 		})
 		.state("root.producer",{
 			url:"/producer",
-			templateUrl:"../templates/producer.html"
+			templateUrl:"../templates/producer.html",
+
+			
+
 		})
 		.state("root.contact",{
 			url:"/contact",
